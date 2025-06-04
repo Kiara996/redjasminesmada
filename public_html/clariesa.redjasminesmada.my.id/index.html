@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's get to know me!</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #8B4513, #D2691E);
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+        .info {
+            background-color: rgba(255, 165, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #FF4500;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #FF6347;
+        }
+        @keyframes fall {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100vh); }
+        }
+        .leaf {
+            position: absolute;
+            width: 50px;
+            animation: fall 5s infinite;
+        }
+    </style>
+</head>
+<body>
+    <img src="foto-saya.jpg" alt="Foto Clariesa Dhea M. H">
+    <h1>Clariesa Dhea M. H</h1>
+    <p>Tanggal Lahir: 7 Desember 2006</p>
+    <p>Instagram: @trosville</p>
+    <p>Email: clariesadm712@gmail.com</p>
+        <button onclick="window.location.href='https://youtube.com/shorts/Vadlh-6dx2U?si=UBzM4i3_0nNIFZKP'">Click to see my content!</button>
+    </div>
+    <script>
+        for (let i = 0; i < 10; i++) {
+            let leaf = document.createElement('img');
+            leaf.src = 'daun.png';
+            leaf.className = 'leaf';
+            leaf.style.left = Math.random() * 100 + 'vw';
+            leaf.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(leaf);
+        }
+    </script>
+</body>
+</html>

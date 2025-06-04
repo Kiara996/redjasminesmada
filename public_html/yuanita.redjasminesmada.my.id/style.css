@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@200;300;400;500;600;700;900&family=Rubik+Wet+Paint&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DynaPuff", system-ui;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3em;
+    color: #fff;
+    user-select: none;
+    margin-left: -55px;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 6px 15px;
+    transition: .5s;
+}
+
+.navigation a:hover,
+.navigation a:active {
+    color: black;
+}
+
+.navigation a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 30px;
+    z-index: -1;
+    transform: scale(0);
+    transition: .5s;
+}
+
+.navigation a:hover span,
+.navigation a:active span {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('images/bg.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#text {
+    position: absolute;
+    font-size: 4.5em;
+    font-weight: 700;
+    text-align: center;
+    color: indianred;
+    text-shadow: 2px 4px 5px #f9f9f9;
+}
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.parallax img#rumput {
+    transform: translateY(-110px);
+}
+
+.parallax img#tulip-kiri {
+    transform: translateY(-100px);
+}
+
+.parallax img#tulip-kanan {
+    transform: translateY(-100px);
+}
+
+.parallax img#pohon-kiri {
+    transform: translateY(-65px);
+}
+
+.parallax img#pohon-kanan {
+    transform: translateY(-65px);
+}
+
+.sec {
+    position: relative;
+    padding: 150px 100px;
+    height: 100vh;
+    background: url('images/bgprofile.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.sec img {
+    position: relative;
+    float: right;
+    max-width: 320px;
+    margin-top: 125px;
+    margin-right: 75px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+
+.sec h2 {
+    font-size: 3em;
+    color: #fff;
+    margin-top: 125px;
+    margin-bottom: 10px;
+    margin-right: 100px;
+    margin-left: 50px;
+}
+
+.sec p {
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 400;
+    text-align: justify;
+    margin-bottom: 15px;
+    margin-right: 100px;
+    margin-left: 50px;
+}
+
+.sec a {
+    padding: 10px;
+    position: relative;
+    font-size: 4em;
+    color: #fff;
+    border-radius: 5rem;
+    margin-left: 100px;
+}
+
+.sec a:hover {
+    color: rgb(238, 119, 137);
+}
+
+.konten {
+    position: relative;
+    background: #7ca85b;
+    padding: 150px 100px;
+}
+
+.konten h3 {
+    font-size: 2em;
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: -100px;
+}
+
+.konten h2 {
+    font-size: 3em;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.konten p {
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 400;
+    text-align: justify;
+    margin-left: 400px;
+    margin-right: 100px;
+    margin-bottom: 10px;
+}
+
+.konten video {
+    position: relative;
+    float: left;
+    height: 400px;
+    margin-top: -350px;
+    margin-left: 120px;
+    border-radius: 10px;
+}
+
+.konten .box {
+    position: relative;
+	display: flex;
+    padding: 10px 10px 10px 10px;
+	border-radius: 0.5rem;
+    background: rgb(238, 119, 137);
+    margin-left: 400px;
+    margin-right: 560px;
+    text-decoration: none;
+}
+
+.konten span {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.konten .box:hover{
+    background: cornsilk;
+
+}
+
+.konten span:hover {
+    color: rgb(238, 119, 137);
+}
+
+.buy {
+    position: relative;
+    background: rgb(238, 119, 137);
+    padding: 100px 100px;
+}
+
+.buy h2 {
+    font-size: 3em;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: -50px;
+}
+
+.buy p {
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 300;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.conatiner {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1rem;
+	margin-top: 3rem;
+}
+
+.conatiner .box {
+	position: relative;
+	display: flex;
+	box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
+	flex-direction: column;
+	align-items: center;
+	padding: 40px 5px;
+	border-radius: 0.5rem;
+	background: #fff;
+}
+
+.conatiner .box img {
+	width: 350px;
+	height: 350px;
+    border-radius: 0.5rem;
+	object-fit: contain;
+	object-position: center;
+    margin-top: -1.8rem;
+}
+
+.conatiner .box h2 {
+	font-size: 2rem;
+	font-weight: 600;
+	text-align: center;
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+	position: relative;
+	color: rgb(238, 119, 137);
+}
+
+.conatiner .box .btn {
+	padding: 10px;
+	font-size: 1.2rem;
+	background: #7ca85b;
+	color: #fff;
+	border-radius: 1rem;
+	margin-top: -0.5rem;
+	position: relative;
+	margin-bottom: -1.5rem;
+    text-decoration: none;
+}
+
+.conatiner .box .btn:hover {
+	background: rgb(238, 119, 137);
+	color: #fff;
+	transition: 0.2s all linear;
+}
+
+@media (max-width:480px) {
+    header {
+        padding: 20px 70px;
+    }
+    .navigation a {
+    margin-left: 10px;
+    padding: 7px 7px;
+    margin-right: -7px;
+    }
+    #text {
+        font-size: 3em;
+        margin-left: 700px;
+        margin-right: 700px;
+        margin-top: 100px;
+    }
+    .parallax {
+        height: 480px;
+    }
+    .parallax img#rumput {
+        transform: translateY(250px);
+    }
+    
+    .parallax img#tulip-kiri {
+        transform: translateY(250px);
+    }
+    
+    .parallax img#tulip-kanan {
+        transform: translateY(250px);
+    }
+    
+    .parallax img#pohon-kiri {
+        transform: translateY(60px);
+    }
+    
+    .parallax img#pohon-kanan {
+        transform: translateY(60px);
+    }
+    .konten {
+        padding: 350px 100px;
+    }
+    .konten h3 {
+        font-size: 1.5em;
+        margin-top: -300px;
+    }
+    .konten h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        margin-left: -100px;
+        margin-right: -90px;
+    }
+    .konten p {
+        font-size: 1em;
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+    .konten .box {
+        margin-left: -30px;
+        margin-right: 50px;
+        padding: 10px 10px 10px 10px;
+        margin-bottom: 10px;
+    }
+    .konten video {
+        height: 300px;
+        margin-top: 5px;
+        float: inline-start;
+        margin-left: 30px;
+        border-radius: 10px;
+    }
+    .buy p{
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+    .conatiner{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .conatiner .box img {
+        width: 200px;
+        height: 200px;
+    }
+}

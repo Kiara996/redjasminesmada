@@ -1,0 +1,641 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /* min-height: 3000px; */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.bagian {
+  width: 80%;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  padding: 5rem 0;
+}
+
+.bagian .fotobagian {
+  overflow: hidden;
+}
+.bagian .fotobagian img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+  animation: float 3.5s ease-in-out infinite; /* Animasi melayang */
+}
+
+.bagian .bagianisi {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.bagian .bagianisi span.teksnya {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bagian .bagianisi span.teksnya::before {
+  content: ""; /* Menambahkan elemen sebelum teks */
+  display: inline-block;
+  background: #383f47;
+  width: 70px;
+  height: 5px;
+  flex-shrink: 0; /* Menjaga lebar garis tetap */
+}
+
+.bagian .bagianisi h2 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #383f47;
+  padding-bottom: 20px;
+}
+
+.bagian .bagianisi p {
+  font-size: 16px;
+  line-height: 25px;
+  padding-bottom: 25px;
+}
+
+.bagian .bagianisi a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #383f47;
+  color: #fff;
+  padding: 15px 40px;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+@media (max-width: 991px) {
+  .bagian {
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+  }
+  .bagian .bagianisi {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .bagian {
+    width: 90%;
+  }
+  .bagian .bagianisi h2 {
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+
+  .bagian .bagianisi p {
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 575px) {
+  .bagian .bagianisi h2 {
+    font-size: 25px;
+  }
+
+  .bagian .bagianisi p {
+    line-height: 22px;
+    font-size: 15px;
+  }
+  .bagian .bagianisi a {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 522px;
+  min-width: 370px;
+  z-index: 1;
+}
+
+.card-container {
+  display: flex;
+}
+
+.left {
+  flex: 1;
+  height: 480px;
+  background-color: #00b4cf;
+}
+
+.right {
+  display: flex;
+  flex: 1;
+  height: 460px;
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  flex: 1;
+  height: 522px;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.left-container {
+  height: 50%;
+  width: 80%;
+  text-align: center;
+  line-height: 22px;
+}
+
+.left p {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.right-container {
+  width: 70%;
+  height: 80%;
+  text-align: center;
+}
+
+input,
+textarea {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: 1px solid #00b4cf;
+}
+
+button {
+  border-radius: 20px;
+  border: 1px solid #00b4cf;
+  background-color: #00b4cf;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-out;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+textarea {
+  height: 90px;
+}
+/* responsive */
+
+@media only screen and (max-width: 600px) {
+  .left {
+    display: none;
+  }
+
+  .lg-view {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .sm-view {
+    display: none;
+  }
+}
+
+.product-card {
+  max-width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.product-card .card {
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0 5px 5px #425b66;
+  margin-left: 2em;
+  margin-right: 2em;
+  border-radius: 2em;
+}
+.product-card img {
+  max-width: 150px;
+  position: center;
+  margin-bottom: -1rem;
+  margin-left: 5.5em;
+  margin-right: 1.5em;
+}
+.product-card h5 {
+  font-size: 2rem;
+  position: center;
+  margin-bottom: 0rem;
+}
+
+.product-card h3 {
+  font-size: 1.5rem;
+  position: center;
+  margin-bottom: 0rem;
+}
+
+.product-card h2 {
+  font-size: 1.8rem;
+  position: center;
+  margin-bottom: 0rem;
+}
+
+.card {
+  font-family: "candara", sans-serif;
+  width: 450px;
+  height: 440px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+}
+
+.card-image img {
+  width: 100%;
+  height: 160px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+
+.profile-image img {
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  margin-top: -75px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100px;
+  border: 10px solid #fff;
+  transition-duration: 0.4s;
+  transition-property: transform;
+}
+
+.profile-image img:hover {
+  transform: scale(1.1);
+}
+
+.card-content h3 {
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+}
+
+.card-content p {
+  font-size: 16px;
+  text-align: justify;
+  padding: 0 20px 5px 20px;
+}
+
+.icons {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 30px;
+}
+
+.icons a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #0abde3;
+  padding: 0 14px;
+  transition-duration: 0.4s;
+  transition-property: transform;
+}
+
+.icons a:hover {
+  color: #000;
+  transform: scale(1.5);
+}
+.logo {
+  position: relative;
+  z-index: 10;
+}
+.header .logo {
+  font-style: italic;
+  color: #fff;
+}
+
+img {
+  max-width: 900px; /* Sesuaikan ukuran gambar */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  } /* Tinggi melayang */
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.header .logo span {
+  color: #9d6324;
+}
+
+.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 10000;
+}
+.open .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: top;
+  animation: open 1s ease-in-out forwards;
+}
+.open .layer:nth-child(1) {
+  background: #f3c85c;
+  z-index: 2;
+}
+.open .layer:nth-child(2) {
+  background: #dde0e2;
+  animation-delay: 1s;
+  z-index: 1;
+}
+@keyframes open {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #f3c494;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bannerText {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  transform: translate(-50% -50%);
+  max-width: 700px;
+  text-align: center;
+}
+.bannerText h2,
+.bannerText h3 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  transform-origin: left;
+  text-transform: uppercase;
+  transform: scaleX(0);
+  animation: revealTextReverse 1s ease-in-out forwards;
+}
+.bannerText h2 {
+  font-size: 6em;
+  animation-delay: 2s;
+}
+.bannerText h3 {
+  font-size: 3em;
+  animation-delay: 3s;
+}
+.bannerText h2:before,
+.bannerText h3:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #d4e776;
+  width: 100%;
+  height: 100%;
+  transform-origin: right;
+  animation: revealText 1s ease-in-out forwards;
+  animation-delay: 3s;
+}
+.bannerText h3:before {
+  animation-delay: 4s;
+}
+@keyframes revealText {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+@keyframes revealTextReverse {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+.bannerText p {
+  opacity: 0;
+  font-weight: 500;
+  padding: 2;
+  font-size: 1.8rem;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 3s;
+}
+
+.Text h2 {
+  text-align: center;
+  font-size: 3.5rem;
+  animation: fadeout 2s linear forwards;
+  animation-delay: 2s;
+  font-weight: 600;
+}
+.Text p {
+  opacity: 0;
+  text-align: center;
+  font-weight: 500;
+  padding: 3.5;
+  font-size: 1.8rem;
+  animation: fadeIn 2s linear forwards;
+  animation-delay: 1s;
+  margin-bottom: 0.8rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInBottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.sci {
+  position: absolute;
+  bottom: 15px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.sci li {
+  opacity: 0;
+  list-style: none;
+  padding: 10px 0;
+  text-align: center;
+  animation: fadeInBottom 0.5s linear forwards;
+}
+.header ul li:nth-child(1),
+.sci li:nth-child(1) {
+  animation-delay: 2s;
+}
+.header ul li:nth-child(2),
+.sci li:nth-child(2) {
+  animation-delay: 2.25s;
+}
+.header ul li:nth-child(3),
+.sci li:nth-child(3) {
+  animation-delay: 2.5s;
+}
+.header ul li:nth-child(4),
+.sci li:nth-child(4) {
+  animation-delay: 2.75s;
+}
+
+.sci li a {
+  font-size: 1.2em;
+  color: #f4f5ea;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.header .logo {
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  text-transform: uppercase;
+  animation: fadeIn 0.5s linear forwards;
+  animation-delay: 2s;
+}
+.header ul {
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  display: flex;
+}
+.header ul li {
+  opacity: 0;
+  list-style: none;
+  margin: 0 10px;
+  animation: fadeInRight 0.5s linear forwards;
+}
+.header ul li:last-child {
+  margin-right: 0;
+}
+.header ul li a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #2ac257;
+  padding: 5px 10px;
+  letter-spacing: 2px;
+}
+.header ul li a.active,
+.header ul li a:hover {
+  background: #fff;
+  color: #fff;
+}
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}

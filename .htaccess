@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    Options -Indexes
+
+    # Block direct access to index.php 
+    RewriteRule ^index\.php$ - [L] 
+
+    # If the requested file/directory doesn't exist
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.php [L] 
+</IfModule>

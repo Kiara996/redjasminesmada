@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Pribadi Amirul</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Website Pribadi Amirul</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link" data-target="about">Tentang Saya</a></li>
+                <li><a href="#" class="nav-link" data-target="projects">Proyek</a></li>
+                <li><a href="#" class="nav-link" data-target="contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="content fade-in visible">
+            <h2>Tentang Saya</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Kim_Jong-un_2019_%28cropped%29.jpg" alt="Foto Amirul" class="profile-pic">
+            <p>Saya adalah seorang pelajar di SMAN 2 Madiun yang penuh semangat dan antusiasme untuk melanjutkan pendidikan ke jenjang perkuliahan. Selama di sekolah, saya aktif dalam berbagai kegiatan ekstrakurikuler dan akademik, yang membantu saya mengembangkan keterampilan kepemimpinan dan kerja sama. Saya memiliki ketertarikan yang besar dalam sosial, dan berusaha untuk mencapai prestasi terbaik. Selain belajar, saya juga menyukai olahraga, yang memberikan keseimbangan dalam hidup saya. Saya percaya bahwa pendidikan adalah kunci untuk meraih impian, dan saya siap menghadapi tantangan baru di dunia perkuliahan.</p>
+        </section>
+
+        <section id="projects" class="content fade-in" style="display: none;">
+            <h2>Proyek</h2>
+            <p>Saya telah terlibat dalam beberapa proyek menarik, termasuk:</p>
+            <ul>
+                <li><strong>Aplikasi Pengelolaan Pengeluaran</strong>: Sebuah aplikasi berbasis web yang membantu pengguna mencatat dan mengelola pengeluaran bulanan mereka.</li>
+                <li><strong>Game Edukasi</strong>: Game yang dirancang untuk membantu anak-anak belajar matematika dengan cara yang menyenangkan.</li>
+                <li><strong>Website Portofolio</strong>: Website ini, yang dirancang untuk menampilkan karya-karya dan proyek saya.</li>
+            </ul>
+            <p>Proyek-proyek ini memberi saya pengalaman berharga dalam menggunakan teknologi seperti HTML, CSS, dan JavaScript.</p>
+        </section>
+
+        <section id="contact" class="content fade-in" style="display: none;">
+            <h2>Kontak</h2>
+            <p>Anda dapat menghubungi saya melalui email: <a href="mailto:muammaramirul@gmail.com">muammaramirul@email.com</a></p>
+            <p>Atau melalui media sosial:</p>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Amirul. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script>
+        const links = document.querySelectorAll('.nav-link');
+        const contents = document.querySelectorAll('.content');
+
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = link.getAttribute('data-target');
+
+                // Sembunyikan semua konten
+                contents.forEach(content => {
+                    content.style.display = 'none';
+                });
+
+                // Tampilkan konten yang dipilih
+                document.getElementById(target).style.display = 'block';
+            });
+        });
+
+        // Inisialisasi tampilan pertama
+        document.getElementById('about').style.display = 'block';
+    </script>
+</body>
+</html>

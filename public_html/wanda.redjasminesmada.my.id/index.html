@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Wanda Nararya Az-Zarra</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #000428, #004e92);
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+        .info {
+            margin: 20px 0;
+        }
+        .instagram {
+            margin-top: 50px;
+        }
+        .instagram img {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+        .instagram img:hover {
+            transform: scale(1.1);
+        }
+        @keyframes star {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: star 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="foto-saya.jpg" alt="Foto Wanda Nararya Az-Zarra">
+        <div class="info">
+            <h1>Wanda Nararya Az-Zarra</h1>
+            <p>Tempat, Tanggal Lahir: Madiun, 03 September 2006</p>
+            <p>Nomor Telepon: 081336011749</p>
+            <p>Email: wandaazarra@gmail.com</p>
+        </div>
+        <div class="instagram">
+            <h2>Konten Instagram Terbaru</h2>
+            <a href="https://www.instagram.com/reel/DCBJ9GeBMCq/?igsh=MW5lbjM4a2VvZzNsZw==">
+                <img src="gambar-instagram-1.jpg" alt="Instagram Post 1">
+            </a>
+            <a href="https://www.instagram.com/reel/DCBJ9GeBMCq/?igsh=MW5lbjM4a2VvZzNsZw==">
+                <img src="gambar-instagram-2.jpg" alt="Instagram Post 2">
+            </a>
+            <a href="https://www.instagram.com/reel/DCBJ9GeBMCq/?igsh=MW5lbjM4a2VvZzNsZw==">
+                <img src="gambar-instagram-3.jpg" alt="Instagram Post 3">
+            </a>
+        </div>
+    </div>
+    <script>
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.top = Math.random() * 100 + 'vh';
+            document.body.appendChild(star);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: url('https://images.unsplash.com/photo-1730285541609-db6d55b06216?q=80&w=1665&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+header {
+    background: rgba(53, 66, 74, 0.9);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 215, 0, 0.5);
+}
+
+main {
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.content {
+    display: none;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.profile-pic {
+    max-width: 150px;
+    border-radius: 50%;
+    margin: 20px 0;
+    border: 3px solid #ffd700;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(53, 66, 74, 0.9);
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
