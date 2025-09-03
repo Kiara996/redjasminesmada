@@ -51,9 +51,10 @@ The main domain serves as a homepage and gallery for the "Red Jasmine" generatio
 
 ## 📁 Structure
 
-- `class/eternity.redjasminesmada.my.id/` — Student portfolios (e.g., Amirul)
-- `class/venturous.redjasminesmada.my.id/` — Student projects, personal pages, and event showcases (e.g., Kevin, Hasna, Ardelia)
-- `class/zivensix.redjasminesmada.my.id/` — Additional portfolio templates and assets
+-- Red Jasmine Informatics Class --
+- `class/eternity.redjasminesmada.my.id/`
+- `class/venturous.redjasminesmada.my.id/`
+- `class/zivensix.redjasminesmada.my.id/`
 
 ---
 
